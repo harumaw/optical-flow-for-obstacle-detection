@@ -1,0 +1,34 @@
+# Окружение Python и кэши
+.venv/
+**/__pycache__/
+*.pyc
+
+# Данные: датасеты (TUM, UZH-FPV), ролики YouTube, кэши кадров и потока — большие и чужие.
+# В репозиторий идут только ручная разметка и скрипты подготовки.
+code/data/**
+!code/data/**/
+!code/data/**/*.events.json
+!code/data/**/*.labels.csv
+!code/data/uzh_fpv/to_video.py
+code/data/uzh_fpv/calib/
+code/data/flow_cache/
+code/data/scenes_cache/
+code/data/tum/
+
+# Результаты прогонов: видео, кэши, промежуточные таблицы (воспроизводятся скриптами)
+code/results/
+
+# Модели нейросетей
+*.pt
+*.pth
+*.onnx
+
+# Текст диплома, презентация и логотип — не публикуются (черновик проходит антиплагиат)
+text/
+presentation/
+logo.jpg
+
+# Системное
+.DS_Store
+Thumbs.db
+desktop.ini

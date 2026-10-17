@@ -1,0 +1,13 @@
+# Оптический поток, замеры, графики, демо
+numpy>=2.0
+opencv-python>=4.10,<5
+matplotlib>=3.8
+pandas>=2.2
+pillow>=10
+
+# Необязательно: скачивание роликов YouTube для проверки на реальных полётах
+# yt-dlp
+
+# Нейросети (следующий этап; ставить с CUDA-сборкой torch):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+#   pip install transformers

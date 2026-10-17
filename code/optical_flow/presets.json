@@ -1,0 +1,182 @@
+{
+  "synthetic_best": {
+    "description": "лучшая по 26 синтетическим сценам; на реальных полётах тревога почти всегда",
+    "config": {
+      "work_width": 160,
+      "flow_sigma": 3.0,
+      "row_baseline": 0.0,
+      "ground_frac": 0.2,
+      "corridor_frac": 0.6,
+      "path_frac": 0.15,
+      "min_cells": 4,
+      "ema_alpha": 0.7,
+      "derotate": true,
+      "min_persist": 1,
+      "ttc_threshold_s": 4.0,
+      "horizon_margin_deg": -1,
+      "gyro_derotate": false,
+      "consistency_tol": 0.0
+    },
+    "results": {
+      "indoor_forward_3": {
+        "caught": 12,
+        "events": 12,
+        "false_alarm_rate": 1.0,
+        "lead_s": 0.75
+      },
+      "indoor_forward_6": {
+        "caught": 9,
+        "events": 9,
+        "false_alarm_rate": 1.0,
+        "lead_s": 0.83
+      },
+      "indoor_forward_9": {
+        "caught": 1,
+        "events": 1,
+        "false_alarm_rate": 1.0,
+        "lead_s": 1.58
+      },
+      "indoor_forward_10": {
+        "caught": 2,
+        "events": 2,
+        "false_alarm_rate": 1.0,
+        "lead_s": 0.89
+      }
+    }
+  },
+  "hangar_plane": {
+    "description": "ангар, подбор на полётах 3+6; поворот вычитается наклонной плоскостью по картинке",
+    "config": {
+      "work_width": 160,
+      "flow_sigma": 2.0,
+      "row_baseline": 1.5,
+      "ground_frac": 0.5,
+      "corridor_frac": 0.6,
+      "path_frac": 0.1,
+      "min_cells": 4,
+      "ema_alpha": 1.0,
+      "derotate": true,
+      "min_persist": 1,
+      "ttc_threshold_s": 4.0,
+      "horizon_margin_deg": 10,
+      "gyro_derotate": false,
+      "consistency_tol": 0.0
+    },
+    "results": {
+      "indoor_forward_3": {
+        "caught": 12,
+        "events": 12,
+        "false_alarm_rate": 0.0182,
+        "lead_s": 0.68
+      },
+      "indoor_forward_6": {
+        "caught": 9,
+        "events": 9,
+        "false_alarm_rate": 0.0694,
+        "lead_s": 0.78
+      },
+      "indoor_forward_9": {
+        "caught": 1,
+        "events": 1,
+        "false_alarm_rate": 0.0188,
+        "lead_s": 1.55
+      },
+      "indoor_forward_10": {
+        "caught": 2,
+        "events": 2,
+        "false_alarm_rate": 0.0699,
+        "lead_s": 0.7
+      }
+    }
+  },
+  "hangar_gyro": {
+    "description": "ангар, подбор на полётах 3+6; поворот вычитается по ориентации дрона (гироскоп/автопилот)",
+    "config": {
+      "work_width": 160,
+      "flow_sigma": 2.0,
+      "row_baseline": 2.0,
+      "ground_frac": 0.5,
+      "corridor_frac": 0.6,
+      "path_frac": 0.1,
+      "min_cells": 2,
+      "ema_alpha": 0.7,
+      "derotate": false,
+      "min_persist": 2,
+      "ttc_threshold_s": 3.0,
+      "horizon_margin_deg": 10.0,
+      "gyro_derotate": true,
+      "consistency_tol": 0.5
+    },
+    "results": {
+      "indoor_forward_3": {
+        "caught": 12,
+        "events": 12,
+        "false_alarm_rate": 0.0208,
+        "lead_s": 0.63
+      },
+      "indoor_forward_6": {
+        "caught": 9,
+        "events": 9,
+        "false_alarm_rate": 0.0694,
+        "lead_s": 0.8
+      },
+      "indoor_forward_9": {
+        "caught": 1,
+        "events": 1,
+        "false_alarm_rate": 0.0042,
+        "lead_s": 1.58
+      },
+      "indoor_forward_10": {
+        "caught": 2,
+        "events": 2,
+        "false_alarm_rate": 0.014,
+        "lead_s": 0.73
+      }
+    }
+  },
+  "hangar_single_flight": {
+    "description": "ангар, подбор только на полёте 3, маска по горизонту (предыдущий круг)",
+    "config": {
+      "work_width": 160,
+      "flow_sigma": 2.0,
+      "row_baseline": 1.5,
+      "ground_frac": 0.5,
+      "corridor_frac": 0.6,
+      "path_frac": 0.1,
+      "min_cells": 2,
+      "ema_alpha": 1.0,
+      "derotate": true,
+      "min_persist": 1,
+      "ttc_threshold_s": 2.0,
+      "horizon_margin_deg": 10,
+      "gyro_derotate": false,
+      "consistency_tol": 0.0
+    },
+    "results": {
+      "indoor_forward_3": {
+        "caught": 12,
+        "events": 12,
+        "false_alarm_rate": 0.0416,
+        "lead_s": 0.71
+      },
+      "indoor_forward_6": {
+        "caught": 9,
+        "events": 9,
+        "false_alarm_rate": 0.125,
+        "lead_s": 0.79
+      },
+      "indoor_forward_9": {
+        "caught": 1,
+        "events": 1,
+        "false_alarm_rate": 0.0146,
+        "lead_s": 1.58
+      },
+      "indoor_forward_10": {
+        "caught": 2,
+        "events": 2,
+        "false_alarm_rate": 0.0513,
+        "lead_s": 0.88
+      }
+    }
+  }
+}
